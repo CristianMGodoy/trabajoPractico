@@ -1,0 +1,56 @@
+package com.example.reducirreutilizarreciclar
+
+fun main() {
+
+    var turno1= Turno("mañana","7:00","13:00")
+    println(turno1)
+    println("*************************************************************************************************")
+    var persona1=Persona("Beronica","Consta",23456789,37)
+    println(persona1)
+    println("*************************************************************************************************")
+ var recepcionista1=Recepcionista("lara","Ruiz",32333555,25,  Turno("tarde","13:00","20:00"))
+ println(recepcionista1)
+   recepcionista1.trabajar()
+    println("*************************************************************************************************")
+    var recepcionista2=Recepcionista("Marcela","Lopez",22443555,27,  Turno("mañana","6:00","13:00"))
+    println(recepcionista1)
+    recepcionista1.trabajar()
+    println("****************************************************************************************************")
+    var transportista1=Transportista("Jose","Prada",245666233,46,Turno("mañana","7:00","13:00"),"camión")
+    println(transportista1)
+    transportista1.trabajar()
+    println("*****************************************************************************************************")
+    var tecnico1=Tecnico("Juan","Mora",34567890,24, Turno("noche","20:00","6:00"))
+    println(tecnico1)
+    tecnico1.trabajar()
+    println("*********************************************************************************************************")
+    var encargadoDeLaTienda1=EncargadoDeLaTienda("Fernanda","Avalos",36789098,30,Turno("tarde","12:00","20:00"))
+    println(encargadoDeLaTienda1)
+    encargadoDeLaTienda1.trabajar()
+    println("**********************************************************************************************************")
+var producto1=Producto(1,"bicicleta",1000.00)
+    println(producto1)
+    println("**********************************************************************************************************")
+    var producto2=Producto(2,"mesa",3000.00)
+    println(producto2)
+    println("********************************************************************************************************")
+ producto1.tipo="arma"
+println(producto1.tipo)
+    println("*************************************************************************************************************")
+
+  var  tienda1=Tienda("Supertienda","Mitre 1232",1534566789, mutableListOf(recepcionista1,recepcionista2),
+        mutableListOf(transportista1), mutableListOf(tecnico1), mutableListOf(encargadoDeLaTienda1),
+        mutableListOf(producto1,producto2))
+    println(tienda1)
+    println("-------------------------------------------------------------------------------------------")
+    tienda1.listRecepcionistas()
+    println("-------------------------------------------------------------------------------------------")
+    tienda1.listTransportistas()
+    println("-------------------------------------------------------------------------------------------")
+    tienda1.listTecnicos()
+    println("-------------------------------------------------------------------------------------------")
+    tienda1.listEncargados()
+    println("-------------------------------------------------------------------------------------------")
+    tienda1.listProductos()
+
+}
